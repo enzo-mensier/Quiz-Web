@@ -1,0 +1,59 @@
+{
+    "questions": [
+        {
+            "question": "Quelle est un des 3 points essentiels d'HTML ?",
+            "choices": [
+                "HTML signifie HyperText Markdown Language.",
+                "HTML est un langage de programmation.",
+                "HTML décrit la structure d'une page Web."
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Quelle est un des 3 points essentiels de CSS ?",
+            "choices": [
+                "CSS signifie Cascading Style Sheets.",
+                "CSS permet de créer des applications mobiles.",
+                "CSS est un langage de balisage ou description."
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Quelle est un des 3 points essentiels de JavaScript ?",
+            "choices": [
+                "JavaScript est utilisé pour créer des pages statiques.",
+                "JavaScript permet d'ajouter des interactions et des animations.",
+                "JavaScript est un langage de programmation côté serveur.",
+                "JavaScript est utilisé uniquement pour la mise en page."
+            ],
+            "correct": 1
+        },
+        {
+            "question": "Quelle est un des 3 points essentiels de PHP ?",
+            "choices": [
+                "PHP est un langage de programmation côté serveur.",
+                "PHP est utilisé pour structurer une page web.",
+                "PHP permet de créer des bases de données."
+            ],
+            "correct": 0
+        },
+        {
+            "question": "1 exemple de Framework Front-End :",
+            "choices": [
+                "Laravel",
+                "Python",
+                "Tailwind"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "1 exemple de Framework Back-End :",
+            "choices": [
+                "Ruby",
+                "Laravel",
+                "GitHub"
+            ],
+            "correct": 1
+        }
+    ]
+}

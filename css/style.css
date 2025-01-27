@@ -1,0 +1,271 @@
+:root {
+    --background-color: #121212;
+    --card-color: #1E1E1E;
+    --primary-color: #FF6D00;
+    --secondary-color: #00E676;
+    --text-color: #FFFFFF;
+    --muted-text-color: #B0BEC5;
+    --error-color: #D32F2F;
+    --success-color: #00E676;
+    --border-button: #181818;
+    --border-button-hover: #2c2c2c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    max-width: 800px;
+    width: 90%;
+    background: var(--card-color);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center; /* Centre le contenu textuellement */
+    margin-bottom: 2rem; /* Ajout d'espace en bas */
+}
+
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container h1 {
+    margin-bottom: 2rem;
+}
+
+.container input {
+    padding: 2rem 0 2rem;
+}
+
+
+/* Formulaire */
+.name-form {
+    margin: 2rem 0; /* Ajout d'espace au-dessus et en dessous */
+    text-align: center;
+}
+
+#player-name {
+    padding: 0.8rem;
+    font-size: 1.2rem;
+    border: 2px solid var(--border-button);
+    border-radius: 5px;
+    background: var(--card-color);
+    color: var(--text-color);
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 400px;
+    margin-bottom: 1.5rem; /* Plus d'espace en dessous */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#player-name:hover {
+    border: 2px solid var(--border-button-hover);
+
+}
+
+#start-quiz {
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+    background: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin: 1.5rem auto; /* Plus d'espace en haut et en bas */
+}
+
+#start-quiz:hover {
+    background: #FF8C42;
+    transform: translateY(-2px);
+}
+
+/* Quiz Section */
+.quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5rem; /* Espace supplémentaire entre l'entête et les questions */
+}
+
+#timer {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+#score {
+    font-size: 1.2rem;
+    color: var(--muted-text-color);
+}
+
+#question {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+#choices {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem; /* Espace supplémentaire entre les choix */
+    justify-items: center;
+}
+
+.choice {
+    padding: 1rem;
+    background: var(--card-color);
+    border: 2px solid var(--muted-text-color);
+    border-radius: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 80%;
+}
+
+.choice:hover {
+    background: var(--primary-color);
+    color: #FFF;
+}
+
+.choice.correct {
+    background: var(--success-color);
+    color: var(--text-color);
+    border-color: var(--success-color);
+}
+
+.choice.incorrect {
+    background: var(--error-color);
+    color: var(--text-color);
+    border-color: var(--error-color);
+}
+
+/* Progress Bar */
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background: #444;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 2.5rem 0; /* Espace au-dessus et en dessous */
+}
+
+.progress {
+    width: 0%;
+    height: 100%;
+    background: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+/* Résultats */
+#results-section {
+    text-align: center;
+    margin-top: 2rem; /* Espace supplémentaire en haut */
+}
+
+#final-score {
+    font-size: 2.5rem;
+    margin: 2rem 0;
+    color: var(--secondary-color);
+}
+
+#leaderboard {
+    margin: 2rem 0;
+    background: var(--card-color);
+    border-radius: 10px;
+    padding: 1.5rem; /* Augmenté pour un meilleur espacement interne */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+#scores-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: var(--text-color);
+    margin-top: 1rem; /* Ajout d'un espace entre le tableau et le texte précédent */
+}
+
+#scores-table th,
+#scores-table td {
+    padding: 0.8rem;
+    border: 1px solid var(--muted-text-color);
+    text-align: center;
+}
+
+#scores-table th {
+    background: var(--primary-color);
+    color: var(--text-color);
+}
+
+/* Boutons */
+button {
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--text-color);
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease, transform 0.2s ease;
+    margin: 1.5rem auto; /* Ajout d'espacement automatique */
+}
+
+button:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.1);
+}
+
+button:active {
+    transform: translateY(2px);
+    filter: brightness(0.9);
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+    background: var(--muted-text-color);
+}
+
+/* Global Centering for Everything */
+.container, 
+.name-form, 
+#player-name, 
+button, 
+#choices .choice {
+    margin: 0 auto; /* Center horizontalement */
+}
