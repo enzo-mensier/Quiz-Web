@@ -38,7 +38,7 @@
             "correct": 0
         },
         {
-            "question": "1 exemple de Framework Front-End :",
+            "question": "Quelle est le Framework Back-End ?",
             "choices": [
                 "Laravel",
                 "Python",
@@ -47,7 +47,7 @@
             "correct": 2
         },
         {
-            "question": "1 exemple de Framework Back-End :",
+            "question": "Quelle est le Framework Back-End ?",
             "choices": [
                 "Ruby",
                 "Laravel",
